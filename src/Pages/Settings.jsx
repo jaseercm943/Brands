@@ -72,7 +72,7 @@ function Settings() {
         if(!query){
             loadPaginatedBrands()
         }else{
-            const searchedBrand = allBrands.filter(brand => brand.data.brandName.toLowerCase().includes(query));
+            const searchedBrand = allBrands.filter(brand => brand.data.brandName.toLowerCase().includes(query)||brand.data.brandCode.toLowerCase().includes(query));
             setAllData(searchedBrand);
         }
     };
